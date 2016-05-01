@@ -1,4 +1,4 @@
-FROM akhetbase/akhet-base-ubuntu
+FROM akhetbase/akhet-base-ubuntu-16-04
 
 MAINTAINER wikitolearn sysadmin@wikitolearn.org
 ENV DEBIAN_FRONTEND noninteractive
