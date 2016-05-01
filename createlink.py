@@ -1,7 +1,11 @@
 #!/usr/bin/python2
 import json
 import os
-data=json.loads('{"instance_node": "172.17.0.1", "instance_ws_paths": {}, "instance_port": 1000, "docker_id": "17abaab1a6787e792d61f2f9e5da2457aacdb36050d1105fd6bd8b9cf05a3e66", "host_name": "192.168.93.40", "instance_password": "45TVB7MC", "instance_path": "/wsvnc/172.17.0.1/1000", "instance_http_paths": {"80": "/http/172.17.0.1/3000"}, "host_port": 80, "host_ssl_port": 443, "status": 1}')
+data=None
+with open('/akhet.json', 'r') as content_file:
+    content = content_file.read()
+    data=json.loads(content)
+# '{"instance_node": "172.17.0.1", "instance_ws_paths": {}, "instance_port": 1000, "docker_id": "17abaab1a6787e792d61f2f9e5da2457aacdb36050d1105fd6bd8b9cf05a3e66", "host_name": "192.168.93.40", "instance_password": "45TVB7MC", "instance_path": "/wsvnc/172.17.0.1/1000", "instance_http_paths": {"80": "/http/172.17.0.1/3000"}, "host_port": 80, "host_ssl_port": 443, "status": 1}'
 http_path=data['instance_http_paths']['80']
 # mkdir -p /webdav/http/172.17.0.1/
 # ln -s /home/user/ /webdav/http/172.17.0.1/3000
