@@ -1,6 +1,6 @@
 FROM akhetbase/akhet-base-ubuntu-16-04
 
-MAINTAINER wikitolearn sysadmin@wikitolearn.org
+MAINTAINER WikiToLearn akhet@wikitolearn.org
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
